@@ -1,3 +1,4 @@
+'use strict';
 angular.module('stockApp')
 .controller('StockController' , function($scope) {
      $scope.products = [
