@@ -1,5 +1,5 @@
 'use strict';
-angular.module('stockApp')
+angular.module('stockModule')
 .controller('StockController' , function($scope) {
      
      $scope.seletedVendor = '';

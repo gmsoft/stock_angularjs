@@ -1,14 +1,10 @@
-'use strict';
-var app = angular.module('stockApp', ["ngRoute"]);
-app.config(function($routeProvider) {
-  $routeProvider
-  .when("/stock/list", {
-    templateUrl : "partials/stock/list.html",
-    controller: 'StockController'
+// Modo Stricto. Evita inconsitencias de codificación
+'use strict'; 
 
-  })
-  .when("/stock/add", {
-    templateUrl : "partials/stock/add.html",
-    controller: 'StockController'
-  })
-});
+// Módulo principal de la aplicación
+angular.module('stockApp', ["ngRoute"]); 
+
+// Módulos de la aplicación
+angular.module('accountModule',[]);
+angular.module('dashboardModule',[]);
+angular.module('stockModule',[]);
