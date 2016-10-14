@@ -14,7 +14,12 @@ var app = angular.module('stockApp')
   };
 })
 .filter('productCode', function(){
-  return function(input) {
-    return input.toLowerCase();
+  return function(input, lowercase) {
+    input = input || '';
+    var out = input;
+    if (lowercase) {
+      out = out.toLowerCase();
+    }
+    return out;
   };
 });
