@@ -1,0 +1,18 @@
+*** Curso AngularJS - Clase 02 ***
+
+Teoría:
+- Intro a AngularJS. Porque Angular? Como Funciona?
+- Crear cuenta en Github
+- Ejercicio de Git: https://try.github.io/
+- Introducción a Módulos
+- Introducción a Controllers
+- Expresiones
+- Directivas: 
+* Ng-App
+* Ng-Controller
+- MVC
+
+Ejercicios:
+- Hola Mundo
+- Expresiones
+

@@ -1,0 +1,10 @@
+CLASE 3
+- El objeto $rootScope
+- Funcion config y run
+- Funcion forEach
+- La directiva ng-repeat
+- Filtros de AngularJS. 
+- Filtros Personalizados. 
+- La directiva ng-src
+* Practico:
+- Inicio del proyecto final: Listado de Productos con Buscador, Imagen y Filtros personalizados
