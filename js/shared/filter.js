@@ -1,3 +1,4 @@
+'use strict';
 var app = angular.module('stockApp')
 .filter('reverse', function() {
   return function(input, uppercase) {
