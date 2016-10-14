@@ -14,7 +14,11 @@ app.config(function($routeProvider) {
     controller: 'StockController',
 	//topLef: ''
   })
-  .when("/dashboard/", {
+  .when('/stock/edit/:id',  {
+	  templateUrl: 'partials/stock/edit.html',
+	  controller: 'StockController'
+  })
+  .when("/dashboard", {
     templateUrl : "partials/dashboard/index.html",
     controller: 'DashboardController'
   })
@@ -22,8 +26,13 @@ app.config(function($routeProvider) {
     templateUrl : "partials/account/login.html",
     controller: 'AccountController'
   })
-  .otherwise("/", { //Ruta en caso de no mapear
-    templateUrl : "partials/dashboard/index.html",
-    controller: 'DashboardController'
-  })
+  .otherwise({redirectTo: '/dashboard'})
+});
+
+
+//Constantes de la aplicación
+app.constant('appGlobals', {
+    appName: 'Sistema de Stock',
+    appVersion: 'v0.1',
+	appApiUri: 'http://localhost:8089/api'
 });

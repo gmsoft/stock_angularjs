@@ -11,6 +11,9 @@
 	<!-- AngularJS Config. Routing -->
 	<script src="js/config.js"></script>
 	
+	<!-- AngularJS Root Controller -->
+	<script src="js/root.js"></script>
+	
 	<!-- Shared JS Assets -->
     <script src="js/shared/filter.js"></script>    
     
@@ -20,6 +23,7 @@
 	<!-- Modulo Stock -->
 	<script src="js/stock/stock.js"></script>
     <script src="js/stock/directive.js"></script>
+	<script src="js/stock/service.js"></script>
 	
 	<!-- Modulo Dashboard -->
 	<script src="js/dashboard/dashboard.js"></script>    
@@ -32,9 +36,9 @@
 	
   </head>
   
-  <body>
+  <body ng-controller="RootController">
 
-    <h2>Sistema de Stock</h2>
+    <h2>{{appName}} - {{appVersion}}</h2>
         
 	<!-- Utilización de la directiva ngView para renderizar la vista parcial -->	
     <div ng-view></div>
