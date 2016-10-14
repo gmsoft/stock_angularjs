@@ -2,7 +2,8 @@
 'use strict'; 
 
 // Módulo principal de la aplicación
-angular.module('stockApp', ["ngRoute"]); 
+//Inyecta los modulos necesarios
+angular.module('stockApp', ['ngRoute', 'accountModule', 'dashboardModule' , 'stockModule']); 
 
 // Módulos de la aplicación
 angular.module('accountModule',[]);
