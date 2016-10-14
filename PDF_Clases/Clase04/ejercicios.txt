@@ -1,0 +1,6 @@
+ClASE 4
+- Forms. Form Validations
+- Routes - ng-view
+- Directiva ng-options
+* Practico:
+- Pantalla de Alta de Producto. Validación
