@@ -13,7 +13,7 @@ app.directive("productGrid", function () {
     return {
         replace: true,
         restrict: 'E',
-        templateUrl: 'data-grid.html',
+        templateUrl: 'partials/stock/data-grid.html',
     };
 });
 
