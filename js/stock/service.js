@@ -10,7 +10,6 @@ angular.module('stockModule')
     service.GetAllProducts = function () {
         return $http.get("/json-data/products.json")
                    .then(function (response) {
-					   console.log(response);
                        return response;
                    });
     };

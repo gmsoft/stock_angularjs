@@ -1,7 +1,0 @@
-CLASE 5
-- Directivas propias
-- Introduccion a NodeJS + Express
-- Routes ngRoute - ng-view
-* Practico:
-Instalación de NodeJS/Express. Creacion de server.js
-Crear Directivas propias
