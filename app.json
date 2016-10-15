@@ -1,0 +1,16 @@
+{
+  "name": "stock_angularjs",
+  "description": "Curso de AngularJS",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
