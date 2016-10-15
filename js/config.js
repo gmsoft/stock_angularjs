@@ -2,7 +2,7 @@
 
 var app = angular.module('stockApp');
 
-//Utilización del provider routeProvider de AngularJS para el manejo de enrutamiento
+//Utilizaciï¿½n del provider routeProvider de AngularJS para el manejo de enrutamiento
 app.config(function($routeProvider) {
   $routeProvider
   .when("/stock/list", { //Ruta
@@ -11,7 +11,7 @@ app.config(function($routeProvider) {
   })
   .when("/stock/add", {
     templateUrl : "partials/stock/add.html",
-    controller: 'StockController',
+    controller: 'StockController'
 	//topLef: ''
   })
   .when('/stock/edit/:id',  {
@@ -26,11 +26,32 @@ app.config(function($routeProvider) {
     templateUrl : "partials/account/login.html",
     controller: 'AccountController'
   })
-  .otherwise({redirectTo: '/dashboard'})
+  .when("/account/user-info", {
+    templateUrl : "partials/account/user-info.html",
+    controller: 'AccountController'
+  })
+  .otherwise({redirectTo: '/dashboard'});
+  
+  /* Configuration es el lugar donde se configuran los "providers" ( no las instancias)*/
+  console.log("Configuration del modulo");
+  
 });
 
+/*
+Auth0
+*/ 
+app.config(function(authProvider) {
 
-//Constantes de la aplicación
+    // routing configuration and other stuff
+    // ...
+    authProvider.init({
+      domain: 'shiftmetrics.auth0.com',
+      clientID: 'eYFmD7aLsbMdNdKBAVkFIXGgBaAloPjG',
+      loginUrl: '/account/login'
+    });
+  })
+
+//Constantes de la aplicaciï¿½n
 app.constant('appGlobals', {
     appName: 'Sistema de Stock',
     appVersion: 'v0.1',

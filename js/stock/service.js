@@ -15,25 +15,24 @@ angular.module('stockModule')
     };
 	
 	/*
-	//Metodo para guardar un nuevo usuario
-    service.GuardarUsuario = function (usuario) {
-        return $http.post(serviceBase + "/api/Account/PostUsuario", usuario)
+    service.SaveProduct = function (product) {
+        return $http.post(serviceBase + "/api/product", product)
                   .then(function (response) {
                       return response;
                   });
     };
 
-    //Metodo para actualizar usuario
-    service.UpdateUsuario = function (usuario) {
-        return $http.put(serviceBase + "/api/Account/PutUsuario", usuario)
+    //Metodo para actualizar producto
+    service.UpdateProduct = function (product) {
+        return $http.put(serviceBase + "/api/product", product)
                   .then(function (response) {
                       return response;
                   });
     };
 	
-	 //Elimina Rol de Usuario
-    service.EliminarRolUsuario = function (Id) {
-        return $http.delete(serviceBase + "/api/Presupuesto/DeleteRolUsuario", { params: { UserId: User.Id, RolId: User.RolName } })
+	 //Elimina un producto
+    service.DeleteProduct = function (productCode) {
+        return $http.delete(serviceBase + "/api/product", { params: { code: productCode } })
                  .then(function (response) {
                      return response;
                  });
@@ -43,5 +42,3 @@ angular.module('stockModule')
     return service;
 
 }]);
-
-

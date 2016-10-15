@@ -4,19 +4,29 @@
             <th>Codigo</th>
             <th>Descripcion</th>
             <th>Precio</th>
+			<th>Stock</th>
+			<th>Fecha Alta</th>
             <th>Foto</th>
             <th>Fabricante</th>
             <th>Notas</th>
+			<th>Acciones</th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="product in products | filter : searchProduct | orderBy:'price'">                
+        <tr ng-repeat="product in products | filter : searchProduct | orderBy:'price'">
             <td>{{product.code | productCode}}</td>
             <td>{{product.description | uppercase}}</td>
             <td>{{product.price | currency}}</td>
+			<td>{{product.stock}}</td>
+			<td>{{product.added_date | date:'dd/MM/yyyy'}}</td>
             <td><img ng-src="img/products/{{product.picture}}" width="100px" height="100px"></td>
             <td>{{product.vendor}}</td>
             <td>{{product.notes | reverse}}</td>
+			<td>
+			<a href="/#/stock/edit/{{product.code}}">Editar</a> |
+			<a href="/#/stock/publish/{{product.code}}">Publicar</a> |
+			<a href="/#/stock/delete/{{product.code}}">Remover</a>
+			</td>
         </tr>      
     </tbody>
 </table>

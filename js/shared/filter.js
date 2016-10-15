@@ -23,4 +23,19 @@ var app = angular.module('stockApp')
     }
     return out;
   };
+})
+.filter('searchCode', function() {
+  return function(items,search) {
+    var filtered = [];
+    if(!search){return items;}
+    angular.forEach(items, function(item) {
+
+    	if(angular.lowercase(item.title).indexOf(angular.lowercase(search))!=-1)
+    	{
+    		filtered.push(item);
+    	}
+      
+    });
+   return filtered;
+  };
 });

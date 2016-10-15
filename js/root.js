@@ -21,8 +21,13 @@ angular.module('stockApp')
               $scope.routeError = current.routeErrorMessage;
           }
       });
+	  
+	  $scope.print = function(){
+		window.print();  
+	  };
+	  
   }])
-  .run(function ($rootScope, $location, $interval) {
+  .run(function ($rootScope, $location, $interval, auth) {
 
        /*
         //Gestiona el control de 5 minutos de inactividad
@@ -58,6 +63,8 @@ angular.module('stockApp')
             var prevUrl = history.length > 1 ? history.splice(-2)[0] : "/";
             $location.path(prevUrl);
         };
+
+        auth.hookEvents();
 
         //init();
     });

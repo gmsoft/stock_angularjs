@@ -1,21 +1,32 @@
-'use strict';
+'use strict';//Modo Stricto
+//Ejemplo de closure:
+(function(){
+	var app = angular.module("stockModule");
 
-var app = angular.module("stockModule");
+	app.directive("crudActions", ['stockGlobals', function(stockGlobals) {
+		
+		return {
+			controller: function($scope, stockGlobals){
+				$scope.moduleName = stockGlobals.moduleName;
+			},
+			restrict : "E",//Restringe a nivel elemento HTML
+			template : '<p><a href="/#/{{moduleName}}/add">+ Agregar Producto</a> | <a href="#" ng-click="print()">Imprimir</a></p>'
+		};
+	}]);
 
-app.directive("crudActions", function() {
-    return {
-        restrict : "E",//Restringe a nivel elemento HTML
-        template : '<a href="add.html">+ Agregar Producto</a>'
-    };
-});
+	app.directive("productGrid", function () {
+		return {
+			replace: true,
+			restrict: 'E',// //E = element, A = attribute, C = class, M = comment   
+			templateUrl: 'partials/stock/data-grid.html', // Es necesario correr en un servidor la aplicación para que funcionen las vistas parciales,
+			controller: function($scope){
+				//console.log("do stuff");
 
-app.directive("productGrid", function () {
-    return {
-        replace: true,
-        restrict: 'E',
-        templateUrl: 'partials/stock/data-grid.html', // Es necesario correr en un servidor la aplicación para que funcionen las vistas parciales
-    };
-});
+			}, //Embed a custom controller in the directive
+			link: function ($scope, element, attrs) { } //DOM manipulation
+		};
+	});
+})();  // Esto () significa que estas llamando a la funcion anónima
 
 
  
