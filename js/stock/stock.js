@@ -28,9 +28,9 @@ angular.module('stockModule')
       ];*/
 	  
 	  var init = function() {
-		StockService.GetAllProducts().then(function(response){
-			$scope.products = response.data;
-		});  
+      StockService.GetAllProducts().then(function(response){
+        $scope.products = response.data;
+      });  
 	  };
 	  
 	  init();
