@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">		   
     <meta name="description" content="Curso de AngularJS - Intertron Education">
     <meta name="author" content="Gustavo Mena">
 
@@ -11,6 +11,12 @@
   
     <!-- AngularJS -->
     <script src="vendor/angular.min.js"></script>
+
+    <!-- Angular Material Library -->
+	<!--
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+	-->
+
     <script src="vendor/angular-route.js"></script>
     
 	<!-- Auth0: https://github.com/auth0/auth0-angular -->
@@ -41,13 +47,21 @@
     <script src="js/stock/directive.js"></script>
 	<script src="js/stock/service.js"></script>
 	
-
+     
     <!-- StyleSheet -->
     <link rel="stylesheet" href="styles/app.css">
-	
-	<!-- Angular Material -->
-	<!-- https://material.angularjs.org/latest/getting-started -->
-	
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<!--
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	--> 
+		
   </head>
   
   <body ng-controller="RootController">
@@ -64,6 +78,22 @@
 	
 	<!-- Directiva ng-Include -->
 	<div ng-include src="'partials/shared/footer.html'"></div>
+
+	<!-- 
+		 Angular Material requires Angular.js Libraries 	
+	
+		 https://material.angularjs.org/latest/getting-started
+	 -->
+    <!-- 
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    -->
+
+	<!-- Angular Material Library -->
+	<!--
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+	-->
 
   </body>
 </html>
