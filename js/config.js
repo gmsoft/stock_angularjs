@@ -18,6 +18,10 @@ app.config(function($routeProvider) {
 	  templateUrl: 'partials/stock/edit.html',
 	  controller: 'StockController'
   })
+  .when('/stock/publish/:id',  {
+	  templateUrl: 'partials/stock/publish.html',
+	  controller: 'PublishStockController'
+  })
   .when("/dashboard", {
     templateUrl : "partials/dashboard/index.html",
     controller: 'DashboardController'

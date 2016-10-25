@@ -1,0 +1,27 @@
+<div ng-app="stockModule">
+	 <form name="productForm" novalidate>
+        
+        <p>
+            Codigo:<br>
+            <input type="text" name="code" ng-model="code" required>
+         
+        </p>
+        <p>
+            Descripcion:<br>
+            <input type="text" name="descrip" ng-model="descrip" ng-required>
+         </p>
+        <p>
+            Fabricante:
+        <!--<select name="vendor" ng-model="vendor" ng-options="item as item.name for item in vendors track by item.id" ></select>-->
+            {{select}}
+            <select name="vendor" ng-model="vendor" ng-options="vendor.name for vendor in vendors" ng-selected="seleted">
+                <option value="">-- choose vendor --</option>
+            </select>                
+        </p> 
+
+        <p>
+            <input type="submit" value="Publish" ng-submit="Publicar" class="btn btn-success">
+            <a ng-href="/#/stock/list" class="btn btn-danger">Back</a>
+        </p>
+    </form>
+</div>

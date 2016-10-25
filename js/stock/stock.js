@@ -1,9 +1,11 @@
 'use strict';
-angular.module('stockModule')
-.controller('StockController', ['$scope', 'StockService', function($scope, StockService) {
+var stock = angular.module('stockModule');
+stock.controller('StockController', ['$scope', 'StockService', function($scope, StockService) {
      
      $scope.seletedVendor = '';
 
+     $scope.vendors = [];
+     /*
      $scope.vendors = [
       {
         id: 1,
@@ -17,8 +19,9 @@ angular.module('stockModule')
         id: 3,
         name: 'Motorola'
       }];
-
+*/
      $scope.products = [];
+
 	 /*
      $scope.products = [
         {code:'CP0001', description:'iPhone 7', price:700, active:true, notes:'Great cell phone', vendor: 'Apple' , picture: '0001.jpg'},
@@ -31,7 +34,16 @@ angular.module('stockModule')
       StockService.GetAllProducts().then(function(response){
         $scope.products = response.data;
       });  
+      
+      StockService.GetAllVendors().then(function(response){
+        $scope.vendors = response.data;
+      });
+
 	  };
 	  
 	  init();
+}]);
+
+stock.controller('PublishStockController', ['$scope', 'StockService', function($scope, StockService) {
+  
 }]);

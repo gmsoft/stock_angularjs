@@ -1,6 +1,6 @@
 'use strict';
 angular.module('accountModule')
-.controller('AccountController' , function($scope, $location, auth) {  
+.controller('AccountController' , function($scope, $location, auth, $http) {  
     $scope.signin = function() {
         auth.signin({
             authParams: {
@@ -16,5 +16,10 @@ angular.module('accountModule')
         }, function(err) {
             console.log("Error :(", err);
         });
+    }
+
+    $scope.meliLogin = function() {
+         $location.path('http://auth.mercadolibre.com.ar/authorization?response_type=token&client_id=5214857140046304');
+         
     }
 });

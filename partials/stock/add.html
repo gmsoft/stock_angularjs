@@ -3,14 +3,14 @@
         
         <p>
             Codigo:<br>
-            <input type="text" name="code" ng-model="code" required>
+            <input class="form-control" type="text" name="code" ng-model="code" required>
             <span style="color:red" ng-show="productForm.code.$dirty && productForm.code.$invalid">
             <span ng-show="productForm.code.$error.required">Code is required.</span>
             </span>
         </p>
         <p>
             Descripcion:<br>
-            <input type="text" name="descrip" ng-model="descrip" ng-required>
+            <input class="form-control" type="text" name="descrip" ng-model="descrip" ng-required>
             <span style="color:red" ng-show="productForm.descrip.$dirty && productForm.descrip.$invalid">
                 <span ng-show="productForm.descrip.$error.required">Description is required.</span>
             </span>
@@ -19,13 +19,14 @@
             Fabricante:
         <!--<select name="vendor" ng-model="vendor" ng-options="item as item.name for item in vendors track by item.id" ></select>-->
             {{select}}
-            <select name="vendor" ng-model="vendor" ng-options="vendor.name for vendor in vendors" ng-selected="seleted">
+            <select class="form-control" name="vendor" ng-model="vendor" ng-options="vendor.name for vendor in vendors" ng-selected="seleted">
                 <option value="">-- choose vendor --</option>
             </select>                
         </p> 
 
         <p>
-            <input type="submit" ng-disabled="productForm.code.$dirty && productForm.code.$invalid">
+            <input type="submit" ng-disabled="productForm.code.$dirty && productForm.code.$invalid" class="btn btn-success">
+              <a ng-href="/#/stock/list" class="btn btn-danger">Back</a>
         </p>
     </form>
 </div>

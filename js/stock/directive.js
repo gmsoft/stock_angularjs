@@ -10,7 +10,7 @@
 				$scope.moduleName = stockGlobals.moduleName;
 			},
 			restrict : "E",//Restringe a nivel elemento HTML
-			template : '<p><a href="/#/{{moduleName}}/add">+ Agregar Producto</a> | <a href="#" ng-click="print()">Imprimir</a></p>'
+			template : '<p><a  class="btn" ng-href="/#/{{moduleName}}/add">+ Agregar Producto</a> | <a href="#" ng-click="print()">Imprimir</a></p>'
 		};
 	}]);
 

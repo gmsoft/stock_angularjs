@@ -1,2 +1,4 @@
 https://github.com/santi8ago8/MercadoLibreNode
 http://developers.mercadolibre.com/list-products/#ListingResults
+
+http://developers.mercadolibre.com/client-side/

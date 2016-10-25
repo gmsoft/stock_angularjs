@@ -13,6 +13,13 @@ angular.module('stockModule')
                        return response;
                    });
     };
+
+     service.GetAllVendors = function () {
+        return $http.get("http://app.sistema365.com/vendors.json")
+                   .then(function (response) {
+                       return response;
+                   });
+    };
 	
 	/*
     service.SaveProduct = function (product) {
