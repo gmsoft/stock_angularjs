@@ -17,9 +17,9 @@
 	app.directive("productGrid", function () {
 		return {
 			replace: true,
-			restrict: 'E',// //E = element, A = attribute, C = class, M = comment   
+			restrict: 'E', //E = element, A = attribute, C = class, M = comment   
 			templateUrl: 'partials/stock/data-grid.html', // Es necesario correr en un servidor la aplicación para que funcionen las vistas parciales,
-			controller: function($scope){
+			controller: function($scope) {
 				//console.log("do stuff");
 
 			}, //Embed a custom controller in the directive

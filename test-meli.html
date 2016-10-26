@@ -1,0 +1,39 @@
+<html> 
+<head> 
+    <script src="vendor/mercadolibre/vendor/cookie.js"></script>
+    <script src="vendor/mercadolibre/vendor/xauth.js"></script>
+    <script src="vendor/mercadolibre/src/mercadolibre.js"></script>
+    <script>
+        function testMeli() {
+            
+            //MELI.init({client_id: 5214857140046304});
+
+            
+            MELI.init(
+                {
+                    client_id: 5214857140046304,
+                    xauth_protocol: "http://",
+                    xauth_domain: "secure.mlstatic.com",
+                    xd_url: "/org-img/sdk/xd-1.0.4.html"
+                });
+
+            
+
+            
+            ///Así de fácil. Luego, la siguiente línea de código mostrará el primer nombre que registraste en MercadoLibre:
+            MELI.login(function() {
+                MELI.get(
+                    "/users/me",{},
+                    function(data) { 
+                        console.log(data);
+                        alert("Hello " + data[2].first_name) 
+                    }
+                );
+            });
+        }
+    </script>
+</head>
+<body>
+     <button onclick="testMeli()">Test MeLi 2</button>   
+</body>
+</html>
