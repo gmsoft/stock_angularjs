@@ -1,0 +1,7 @@
+* ChartsJS con AngularJS
+http://jtblin.github.io/angular-chart.js/
+https://github.com/carlcraig/tc-angular-chartjs
+
+
+* json 2 Xls
+http://stackoverflow.com/questions/20739941/export-json-to-csv-or-excel-with-utf-8-e-g-greek-encoding-using-javascript
