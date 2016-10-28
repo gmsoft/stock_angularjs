@@ -34,16 +34,20 @@ app.config(function($routeProvider) {
     templateUrl : "partials/account/user-info.html",
     controller: 'AccountController'
   })
+  .when("/meli/seller-data", {
+    templateUrl : "partials/meli/seller-data.html",
+    controller: 'MeLiProfileController'
+  })
   .otherwise({redirectTo: '/dashboard'});
-  
+
   /* Configuration es el lugar donde se configuran los "providers" ( no las instancias)*/
   //console.log("Configuration del modulo");
-  
+
 });
 
 /*
 Auth0
-*/ 
+*/
 app.config(function(authProvider) {
 
     // routing configuration and other stuff
@@ -59,5 +63,10 @@ app.config(function(authProvider) {
 app.constant('appGlobals', {
     appName: 'Sistema de Stock',
     appVersion: 'v0.1',
-	appApiUri: 'http://localhost:8089/api'
+	  appApiUri: 'http://localhost:8089/api',
+    mercadoLibre: {
+      sellerId: 58452393,
+      nickname: 'GUSTAVOMENACBA',
+      client_id: 5214857140046304
+    }
 });
