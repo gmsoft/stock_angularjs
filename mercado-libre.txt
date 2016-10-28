@@ -1,4 +1,28 @@
 https://github.com/santi8ago8/MercadoLibreNode
 http://developers.mercadolibre.com/list-products/#ListingResults
-
 http://developers.mercadolibre.com/client-side/
+
+
+* Repos Samples:
+
+https://github.com/oskosk/mercadolibre-frontend
+https://github.com/oscar171/ApiMercadolibreAngular
+
+
+EndPoints
+
+http://auth.mercadolibre.com.ar/authorization?response_type=token&client_id=5214857140046304
+
+https://auth.mercadolibre.com.ar/authorization?response_type=code&client_id=5214857140046304&redirect_uri=http://localhost:8087
+
+* getSellerId
+https://api.mercadolibre.com/sites/MLA/search?nickname=GUSTAVOMENACBA
+
+* productosBySeller
+https://api.mercadolibre.com/sites/MLA/search?seller_id=58452393
+
+* sellerData
+https://api.mercadolibre.com/users/58452393
+
+* sellerAcceptedPaymentMethods
+https://api.mercadolibre.com/users/58452393/accepted_payment_methods

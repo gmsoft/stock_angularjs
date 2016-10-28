@@ -9,8 +9,8 @@ angular.module('stockApp')
 	  
       //Tomo el route actual
       $scope.$on('$routeChangeSuccess', function (e, current, previous) {
-          console.log(previous);
-          console.log(current);
+          //console.log(previous);
+          //console.log(current);
           $scope.currentRoute = current;
           $scope.routeHasError = false;
       });

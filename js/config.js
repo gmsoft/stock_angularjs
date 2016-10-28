@@ -37,7 +37,7 @@ app.config(function($routeProvider) {
   .otherwise({redirectTo: '/dashboard'});
   
   /* Configuration es el lugar donde se configuran los "providers" ( no las instancias)*/
-  console.log("Configuration del modulo");
+  //console.log("Configuration del modulo");
   
 });
 
